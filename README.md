@@ -26,4 +26,4 @@ Your app is ready to be deployed!
 
 ### Live App
 
-[http://localhost:3000](http://localhost:3000)
+[https://hexcolorfinder.netlify.app/](https://hexcolorfinder.netlify.app)
