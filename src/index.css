@@ -1,0 +1,22 @@
+#root,
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: #d8dee7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.inputText {
+  font-size: 500px;
+}

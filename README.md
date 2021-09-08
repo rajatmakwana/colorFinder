@@ -1,0 +1,29 @@
+# Getting Started with ColorFinder
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Once you have downloaded this project from github you need to run following command:
+
+### `npm install`
+
+Run this command to ensure you have all the required dev and project dependencies installed.
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+### Live App
+
+[http://localhost:3000](http://localhost:3000)
