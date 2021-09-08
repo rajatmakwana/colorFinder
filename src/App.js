@@ -7,7 +7,7 @@ import './index.css';
 
 const API = "https://api.color.pizza/v1/names/?name="
 
-const COLOR_LIMIT = 100;
+const COLOR_LIMIT = 100; // Set the intial number for list of hex color
 
 const App = () => {
 
@@ -21,17 +21,16 @@ const App = () => {
 
         clearTimeout(typingTimer);
         typingTimer = setTimeout(() => {
-            if (val !== '') {
+            if (val !== '' && val.length > 2) {
                 fetchColor(val);
             }
-        }, 500);
+        }, 1000);
     }
 
     const fetchColor = (color) => {
         fetch(`${API}${color}`)
             .then(status => status.json())
             .then(resp => {
-                console.log(resp);
                 setColors(resp.colors && resp.colors.length > 0 && resp.colors.slice(0, COLOR_LIMIT).sort((a, b) => {
                     if (a.hex < b.hex) {
                         return -1;
@@ -48,7 +47,7 @@ const App = () => {
     const classes = useStyles();
 
     return (
-        <div>
+        <>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '25px', marginBottom: '10px' }}>
                 <TextField
                     inputProps={{ min: 0, style: { textAlign: 'center', justifyContent: "center", fontSize: '1.5em' } }}
@@ -61,15 +60,15 @@ const App = () => {
             </div>
 
             <Grow in>
-                <Grid className={classes.container} container alignItems="center" spacing={2} >
-                    {colors && colors.map((color, index) => (
+                <Grid key={Math.random()} className={classes.container} container alignItems="center" spacing={2} >
+                    {colors && colors.map(color => (
                         <Grid item xs={4} sm={3} md={2} lg={2} style={{ display: 'grid' }}>
-                            <Color color={color} key={index} />
+                            <Color color={color} key={Math.random()} />
                         </Grid>
                     ))}
                 </Grid>
             </Grow>
-        </div>
+        </>
     )
 }
 

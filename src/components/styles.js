@@ -13,7 +13,6 @@ export default makeStyles({
         justifyContent: 'space-between',
         paddingBottom: '5px',
         height: '100px',
-        // borderBottom: '10px solid white',
     },
     activeCard: {
         borderBottom: '10px solid #22289a',
@@ -30,10 +29,7 @@ export default makeStyles({
         padding: '0 16px',
         marginRight: '100px',
         paddingRight: '100px',
-        // color: 'white',
         color: 'white',
-        // border: 'solid 3px #0ff',
-        // outline: '2px solid white',
     },
 
 });
